@@ -19,6 +19,20 @@ public class MeetingService {
     @Autowired
     private MeetingRepository meetingRepository;
 
+    public enum AddedDays{
+        MONDAY (7), TUESDAY (6), WEDNESDAY (5),
+        THURSDAY (4), FRIDAY (3), SATURDAY (2), SUNDAY (1);
+        private final int value;
+
+        AddedDays (int value) {
+            this.value = value;
+        }
+
+        public int getvalue() {
+            return this.value;
+        }
+    }
+
     public List<Meeting> getTodaysMeetings(String username){
         LocalDate date = LocalDate.now();
         return meetingRepository.getMeetingsByDateAndUsername(Date.valueOf(date), username);
@@ -28,10 +42,12 @@ public class MeetingService {
         List<Meeting> weekMetings = new ArrayList<>();
         List<Meeting> all = meetingRepository.getMeetingsByUsername(username);
         LocalDate date = LocalDate.now();
+        DayOfWeek day = date.getDayOfWeek();
+        int noOfDays = AddedDays.valueOf(day.toString()).getvalue();
 
         for(Meeting m: all) {
             if(m.getDate().after(Date.valueOf(date.minusDays(1))) &&
-                    m.getDate().before(Date.valueOf(date.plusDays(addDays(date.getDayOfWeek()))))) {
+                    m.getDate().before(Date.valueOf(date.plusDays(noOfDays)))) {
                 weekMetings.add(m);
             }
         }
@@ -46,22 +62,6 @@ public class MeetingService {
     }
 
 
-    public int addDays(DayOfWeek day) {
-        switch (day) {
-            case MONDAY:
-                return 6;
-            case TUESDAY:
-                return  5;
-            case WEDNESDAY:
-                return 4;
-            case THURSDAY:
-                return 3;
-            case FRIDAY:
-                return 2;
-            case SATURDAY:
-                return 1;
-             default:
-                 return 0;
-        }
-    }
+
+
 }

@@ -2,6 +2,7 @@ package com.endava.workactivity.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.sql.Time;
 
 @Entity
 public class Task {
@@ -10,13 +11,36 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "set_day")
+    private Date setDay;
+
     @Column(name = "due_date")
     private Date dueDate;
 
+    @Column(name = "due_hour")
+    private Time hour;
+
     private String description;
 
+    private String status;
 
     private String username;
+
+    public Date getSetDay() {
+        return setDay;
+    }
+
+    public void setSetDay(Date setDay) {
+        this.setDay = setDay;
+    }
+
+    public Time getHour() {
+        return hour;
+    }
+
+    public void setHour(Time hour) {
+        this.hour = hour;
+    }
 
     public int getId() {
         return id;
@@ -40,6 +64,14 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getUsername() {

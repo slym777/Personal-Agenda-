@@ -12,9 +12,10 @@ import java.util.List;
 
 public interface MeetingRepository extends JpaRepository<Meeting, Integer> {
 
-
     List<Meeting> getMeetingsByDateAndUsername(Date d, String u);
+
     List<Meeting> getMeetingsByUsername(String username);
+
     void deleteById(int id);
 
     @Query("DELETE FROM Meeting m WHERE m.date<:date")
