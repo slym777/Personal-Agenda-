@@ -35,15 +35,14 @@ public class MeetingService {
                 weekMetings.add(m);
             }
         }
-
         return weekMetings;
     }
 
 
     @Transactional
-    public void update(){
+    public void deleteOldMeetings(){
         LocalDate date = LocalDate.now();
-        meetingRepository.update(Date.valueOf(date));
+        meetingRepository.deleteOldMeetings(Date.valueOf(date));
     }
 
 
