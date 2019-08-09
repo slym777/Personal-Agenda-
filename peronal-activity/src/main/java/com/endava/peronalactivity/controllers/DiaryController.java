@@ -14,9 +14,6 @@ import java.util.Optional;
 public class DiaryController {
 
     @Autowired
-    private DiaryRepository diaryRepository;
-
-    @Autowired
     private EntryRepository entryRepository;
 
     @Autowired
