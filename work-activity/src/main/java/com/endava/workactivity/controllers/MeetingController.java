@@ -27,19 +27,19 @@ public class MeetingController {
         meetingRepository.save(meeting);
     }
 
-   @GetMapping("/week/{username}")
-    public List<Meeting> getWeekMeetings(@PathVariable String username) {
-        return meetingService.getWeeksMeetings(username);
-   }
+//   @GetMapping("/week/{username}")
+//    public List<Meeting> getWeekMeetings(@PathVariable String username) {
+//        return meetingService.
+//   }
 
     @GetMapping("/today/{username}")
     public List<Meeting> getTodayMeetings(@PathVariable String username) {
-        return meetingService.getDateMeetings(Date.valueOf(LocalDate.now()), username);
+        return meetingService.getTodaysMeetings(username);
     }
 
     @GetMapping("/date/{date}/{username}")
     public List<Meeting> getDateMeetings(@PathVariable Date date, @PathVariable String username){
-        return meetingService.getDateMeetings(date, username);
+        return meetingRepository.getMeetingsByDateAndUsername(date, username);
     }
 
     @GetMapping("/update")

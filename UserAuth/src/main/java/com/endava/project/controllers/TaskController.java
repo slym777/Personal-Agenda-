@@ -13,35 +13,40 @@ import java.util.List;
 @RequestMapping("/task")
 public class TaskController {
 
-    private TaskProxy userServiceProxy;
+    private TaskProxy taskProxy;
 
     @Autowired
     public TaskController(TaskProxy userServiceProxy){
-        this.userServiceProxy = userServiceProxy;
+        this.taskProxy = userServiceProxy;
     }
 
     @GetMapping("/getAll")
     public List<Task> getAllTasks(){
-        return userServiceProxy.getTasks();
+        return taskProxy.getTasks();
     }
 
     @GetMapping("/reminders")
     public List<Task> getMYReminders(){
-        return userServiceProxy.getMyReminders();
+        return taskProxy.getMyReminders();
     }
 
     @GetMapping("/dateReminders/{date}")
     public List<Task> getDateReminders(@PathVariable Date date){
-        return userServiceProxy.getDateReminders(date);
+        return taskProxy.getDateReminders(date);
     }
 
     @GetMapping("/todayReminders")
     public List<Task> getTodayReminders(){
-        return userServiceProxy.getDateReminders(Date.valueOf(LocalDate.now()));
+        return taskProxy.getDateReminders(Date.valueOf(LocalDate.now()));
     }
 
     @PostMapping("/add")
     public void addTask(@RequestBody Task task){
-        userServiceProxy.addTask(task);
+        taskProxy.addTask(task);
+    }
+
+    @PostMapping("/delete/{id}")
+    public void deleteTask(@PathVariable int id){
+        taskProxy.delete(id);
     }
 }

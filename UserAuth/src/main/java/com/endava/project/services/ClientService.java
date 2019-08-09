@@ -48,4 +48,8 @@ public class ClientService {
             
         }
     }
+
+    public void deleteContact(int id){
+        clientRepository.delete(clientRepository.findClientById(id).get());
+    }
 }

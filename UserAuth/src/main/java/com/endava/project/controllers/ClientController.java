@@ -39,4 +39,9 @@ public class ClientController {
     public void addNewContact(@RequestBody Contact contact){
         clientService.addNewContact(contact);
     }
+
+    @PostMapping("/deleteContact/{id}")
+    public void deleteContact(@PathVariable int id){
+        clientService.deleteContact(id);
+    }
 }

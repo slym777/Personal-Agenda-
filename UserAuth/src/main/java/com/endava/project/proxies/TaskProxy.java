@@ -31,7 +31,7 @@ public class TaskProxy {
     }
 
     public List<Task> getMyReminders(){
-        String url = taskServiceUrl + "/task/reminders/" +
+        String url = taskServiceUrl + "/task/getDailyTasks/" +
                 ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
         return restTemplate.getForObject(url, List.class);
     }
@@ -46,5 +46,10 @@ public class TaskProxy {
         task.setUsername(((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername());
         String url = taskServiceUrl + "/task/add";
         restTemplate.postForLocation(url, task);
+    }
+
+    public void delete(int id){
+        String url = taskServiceUrl + "/task/delete/" + id;
+        restTemplate.delete(url);
     }
 }
