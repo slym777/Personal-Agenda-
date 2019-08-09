@@ -39,9 +39,9 @@ public class DiaryController {
         entryRepository.updateTitle(id,title);
     }
 
-    @PostMapping("/updateEntry")
-    public void updateEntry(@RequestBody int id, @RequestBody String entryText){
-
+    @PostMapping("/updateEntry/{id}")
+    public void updateEntry(@PathVariable int id, @RequestBody String text){
+        entryRepository.updateEntryText(id, text);
     }
 
 

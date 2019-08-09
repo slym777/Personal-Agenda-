@@ -14,4 +14,9 @@ public interface EntryRepository extends JpaRepository<Entry, Integer> {
     void updateTitle(int id, String newTitle);
 
 
+    @Query("UPDATE Entry e SET e.entry=:text WHERE e.id=:id")
+    @Modifying
+    @Transactional
+    void updateEntryText(int id, String text);
+
 }
