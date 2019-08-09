@@ -1,14 +1,16 @@
 package com.endava.project.controllers;
 
+import antlr.Token;
 import com.endava.project.entities.Client;
+import com.endava.project.entities.Contact;
 import com.endava.project.models.Meeting;
 import com.endava.project.models.Task;
 import com.endava.project.services.ClientService;
 import com.endava.project.services.UserServiceProxy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -25,8 +27,8 @@ public class ClientController {
     }
 
     @GetMapping("/hello")
-    public String hello(){
-        return "Hello!";
+    public String hello(Principal principal){
+        return principal.getName();
     }
 
     @GetMapping("/myInfo")
@@ -39,28 +41,8 @@ public class ClientController {
         return clientService.getMyContacts();
     }
 
-    @GetMapping("/getAllTasks")
-    public List<Task> getAllTasks(){
-        return userServiceProxy.getTasks();
-    }
-
-    @GetMapping("/reminders")
-    public List<Task> getReminders(){
-        return userServiceProxy.getMyTodayReminders();
-    }
-
-    @GetMapping("/myMeetings")
-    public List<Meeting> getMyMeetings(){
-        return userServiceProxy.getMyWeekMeetings();
-    }
-
-    @PostMapping("/addTask")
-    public void addTask(@RequestBody Task task){
-        userServiceProxy.addTask(task);
-    }
-
-    @PostMapping("/addMeeting")
-    public void addMeeting(@RequestBody Meeting meeting){
-        userServiceProxy.addMeeting(meeting);
+    @PostMapping("/addContact")
+    public void addNewContact(@RequestBody Contact contact){
+        clientService.addNewContact(contact);
     }
 }

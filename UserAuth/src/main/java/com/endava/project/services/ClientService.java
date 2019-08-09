@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -37,5 +38,14 @@ public class ClientService {
         contacts.forEach( p -> clients.add(clientRepository.findClientByUsername(p.getContact()).get()));
 
         return clients;
+    }
+
+    public void addNewContact(Contact contact){
+        if(clientRepository.findClientByUsername(contact.getContact()).isPresent()) {
+            contact.setUsername(((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername());
+            contactsRepository.save(contact);
+        } else {
+            
+        }
     }
 }
