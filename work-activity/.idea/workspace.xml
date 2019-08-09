@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="971ce4c3-2d51-43b0-a3b6-07bb8de9b7d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/controllers/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/services/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/services/UserServiceProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/services/UserServiceProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserAuth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../UserAuth/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/MeetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/respositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/respositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/MeetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserAuth/src/main/java/com/endava/project/services/UserServiceProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,12 +19,12 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/MeetingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+            <state relative-caret-position="480">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/MeetingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="352">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/entities/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="460">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -73,13 +68,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/entities/Meeting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="340">
               <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/respositories/TaskRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -92,19 +87,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/TaskService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/respositories/MeetingRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="440">
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#0#40#1" expanded="true" />
-                <element signature="e#0#51#1" expanded="true" />
-                <element signature="e#0#51#1" expanded="true" />
-                <element signature="e#0#51#1" expanded="true" />
-                <element signature="e#0#53#1" expanded="true" />
-                <element signature="e#0#51#1" expanded="true" />
-                <element signature="e#0#54#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,6 +117,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -135,6 +133,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/TaskController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/MeetingService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/MeetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/TaskService.java" />
       </list>
     </option>
   </component>
@@ -145,7 +144,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -157,6 +156,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,8 +238,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,6 +341,8 @@
       <workItem from="1565263928406" duration="3607000" />
       <workItem from="1565268065574" duration="619000" />
       <workItem from="1565343399992" duration="3034000" />
+      <workItem from="1565349875716" duration="435000" />
+      <workItem from="1565350373588" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="add work-activity ms">
       <created>1565264639197</created>
@@ -361,11 +362,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7260000" />
+    <option name="totallyTimeSpent" value="8307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -427,24 +427,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/entities/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/entities/Meeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/MeetingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+        <state relative-caret-position="480">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -461,30 +447,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/MeetingController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/entities/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="460">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/respositories/MeetingRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/entities/Meeting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#40#1" expanded="true" />
-            <element signature="e#0#51#1" expanded="true" />
-            <element signature="e#0#51#1" expanded="true" />
-            <element signature="e#0#51#1" expanded="true" />
-            <element signature="e#0#53#1" expanded="true" />
-            <element signature="e#0#51#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -492,6 +465,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/services/TaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/respositories/MeetingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/workactivity/controllers/MeetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

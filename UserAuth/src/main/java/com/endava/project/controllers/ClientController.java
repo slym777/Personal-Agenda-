@@ -1,12 +1,8 @@
 package com.endava.project.controllers;
 
-import antlr.Token;
 import com.endava.project.entities.Client;
 import com.endava.project.entities.Contact;
-import com.endava.project.models.Meeting;
-import com.endava.project.models.Task;
 import com.endava.project.services.ClientService;
-import com.endava.project.services.UserServiceProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,13 +12,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/client")
 public class ClientController {
-
-    private UserServiceProxy userServiceProxy;
+    
     private ClientService clientService;
 
     @Autowired
-    public ClientController(UserServiceProxy userServiceProxy, ClientService clientService){
-        this.userServiceProxy = userServiceProxy;
+    public ClientController(ClientService clientService){
         this.clientService = clientService;
     }
 
