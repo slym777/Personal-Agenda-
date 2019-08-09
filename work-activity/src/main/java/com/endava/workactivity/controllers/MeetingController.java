@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -33,7 +34,12 @@ public class MeetingController {
 
     @GetMapping("/today/{username}")
     public List<Meeting> getTodayMeetings(@PathVariable String username) {
-        return meetingService.getTodaysMeetings(username);
+        return meetingService.getDateMeetings(Date.valueOf(LocalDate.now()), username);
+    }
+
+    @GetMapping("/date/{date}/{username}")
+    public List<Meeting> getDateMeetings(@PathVariable Date date, @PathVariable String username){
+        return meetingService.getDateMeetings(date, username);
     }
 
     @GetMapping("/update")

@@ -33,14 +33,14 @@ public class UserServiceProxy {
         return restTemplate.getForObject(url, List.class);
     }
 
-    public List<Task> getMyTodayReminders(){
-        String url = taskServiceUrl + "/task/reminders/" + Date.valueOf(LocalDate.now()) + "/" +
+    public List<Task> getMyReminders(){
+        String url = taskServiceUrl + "/task/reminders/" +
                 ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
         return restTemplate.getForObject(url, List.class);
     }
 
-    public List<Meeting> getMyWeekMeetings(){
-        String url = taskServiceUrl + "/meeting/week/" +
+    public List<Task> getDateReminders(Date date){
+        String url = taskServiceUrl + "/task/reminders/" + date + "/" +
                 ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
         return restTemplate.getForObject(url, List.class);
     }
@@ -56,4 +56,23 @@ public class UserServiceProxy {
         String url = taskServiceUrl + "/meeting/add";
         restTemplate.postForLocation(url, meeting);
     }
+
+    public List<Meeting> getMyWeekMeetings(){
+        String url = taskServiceUrl + "/meeting/week/" +
+                ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+        return restTemplate.getForObject(url, List.class);
+    }
+
+    public List<Meeting> getTodatMeetings(){
+        String url = taskServiceUrl + "/meeting/today/" +
+                ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+        return restTemplate.getForObject(url, List.class);
+    }
+
+    public List<Meeting> getDateMeetings(Date date){
+        String url = taskServiceUrl + "/meeting/date/" + date + "/" +
+                ((UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+        return restTemplate.getForObject(url, List.class);
+    }
+
 }
